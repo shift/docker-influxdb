@@ -20,6 +20,12 @@ reporting-disabled = false
   bind-address = "0.0.0.0"
   port = 8086
 
+[[graphite]]
+  enabled = true
+  batch-size = 1000 # will flush if this many points get buffered
+  batch-pending = 5 # number of batches that may be pending in memory
+  batch-timeout = "1s" # will flush at least this often even if we haven't hit buffer limit
+
 [collectd]
   enabled = false
 
