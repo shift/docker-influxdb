@@ -5,9 +5,9 @@ MAINTAINER Vincent Palmer <shift@someone.section.me>
 WORKDIR /tmp
 RUN apt-get update \
     && apt-get install curl --yes \
-    && curl -O https://s3.amazonaws.com/influxdb/influxdb_0.9.1_amd64.deb \
-    && dpkg -i influxdb_0.9.1_amd64.deb \
-    && rm influxdb_0.9.1_amd64.deb \
+    && curl -O https://s3.amazonaws.com/influxdb/influxdb_0.9.3_amd64.deb \
+    && dpkg -i influxdb_0.9.3_amd64.deb \
+    && rm influxdb_0.9.3_amd64.deb \
     && rm -rf /var/lib/apt/lists/*
 
 ADD files/run.sh /run.sh
